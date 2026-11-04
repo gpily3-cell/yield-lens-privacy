@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yield Lens Privacy Policy</title>
+<style>
+  :root { --fg:#1b1f24; --muted:#5f6b7a; --bg:#ffffff; --accent:#2563eb; }
+  @media (prefers-color-scheme: dark) { :root { --fg:#e8eaed; --muted:#9aa4b1; --bg:#111315; --accent:#6b9cff; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { font-size:28px; margin:0 0 4px; } h2 { font-size:19px; margin:28px 0 8px; }
+  .muted { color:var(--muted); } a { color:var(--accent); }
+  table { border-collapse:collapse; width:100%; font-size:15px; } th,td { text-align:left; padding:6px 8px; border-bottom:1px solid #8883; vertical-align:top; }
+</style>
+</head>
+<body>
+<main>
+<h1>Yield Lens Privacy Policy</h1>
+<p class="muted">Effective: 4 November 2026</p>
+
+<p>Yield Lens is a Chrome extension that shows rental-investment estimates (cash flow, cap rate, yields, stamp duty) on property listings you are viewing. This policy explains what data the extension handles. In short: <strong>your browsing and property data stay in your browser. We do not run servers that receive it, and we never sell data.</strong></p>
+
+<h2>1. Listing pages you view</h2>
+<p>On supported listing pages (Zillow, Redfin, Rightmove, Domain), the extension reads listing details already on the page, such as price, address, bedrooms, and the site's rent estimate. It does this locally in your browser to calculate the figures in the panel. This information is <strong>not sent</strong> to the developer or to any third party. The extension does not run on any other websites.</p>
+
+<h2>2. Data stored on your device</h2>
+<table>
+  <tr><th>Data</th><th>Where</th><th>Purpose</th></tr>
+  <tr><td>Your default assumptions (interest rate, down payment, buyer type, units)</td><td><code>chrome.storage.sync</code></td><td>Remember your settings. If Chrome Sync is turned on, Google syncs this between your own browsers.</td></tr>
+  <tr><td>Saved listings and scenarios (Pro)</td><td><code>chrome.storage.local</code></td><td>The comparison page and CSV export. Stored only on your device.</td></tr>
+  <tr><td>Subscription status cache</td><td><code>chrome.storage.local</code></td><td>Lets Pro features keep working if you are briefly offline.</td></tr>
+</table>
+<p>You can delete saved listings on the comparison page. Removing the extension deletes all of its local data.</p>
+
+<h2>3. Payments and free trial (ExtensionPay / Stripe)</h2>
+<p>Pro subscriptions and free trials are handled by <a href="https://extensionpay.com">ExtensionPay</a>, with payments processed by <a href="https://stripe.com">Stripe</a>.</p>
+<ul>
+  <li>When you start a trial or subscribe, you enter your email address (and, to pay, your card details) on pages run by ExtensionPay and Stripe. The extension never sees your card details.</li>
+  <li>To check whether Pro is active, the extension contacts extensionpay.com using a random identifier created when the extension is installed. No browsing or listing data is sent.</li>
+  <li>The developer can see your email address and subscription status in the ExtensionPay dashboard. These are used only to provide and support your subscription.</li>
+</ul>
+<p>Please see the privacy policies of <a href="https://extensionpay.com/privacy">ExtensionPay</a> and <a href="https://stripe.com/privacy">Stripe</a>.</p>
+
+<h2>4. What we don't do</h2>
+<ul>
+  <li>No analytics, tracking pixels or advertising.</li>
+  <li>No selling or transferring of user data to third parties, except as needed to process payments as described above.</li>
+  <li>No use of data for purposes unrelated to the extension's single purpose, and no use for credit-worthiness or lending decisions.</li>
+</ul>
+
+<h2>5. Estimates, not advice</h2>
+<p>All figures are estimates based on the listing and your inputs, and are not financial, tax or legal advice. Yield Lens is not affiliated with or endorsed by Zillow, Redfin, Rightmove or Domain.</p>
+
+<h2>6. Changes and contact</h2>
+<p>If this policy changes, we will update this page and the effective date. Questions: <a href="mailto:kyc.com.infomail@gmail.com">kyc.com.infomail@gmail.com</a></p>
+</main>
+</body>
+</html>
