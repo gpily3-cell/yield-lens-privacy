@@ -3,60 +3,97 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Yield Lens Privacy Policy</title>
-<style>
-  :root { --fg:#1b1f24; --muted:#5f6b7a; --bg:#ffffff; --accent:#2563eb; }
-  @media (prefers-color-scheme: dark) { :root { --fg:#e8eaed; --muted:#9aa4b1; --bg:#111315; --accent:#6b9cff; } }
-  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif; }
-  main { max-width:720px; margin:0 auto; padding:32px 16px 64px; }
-  h1 { font-size:28px; margin:0 0 4px; } h2 { font-size:19px; margin:28px 0 8px; }
-  .muted { color:var(--muted); } a { color:var(--accent); }
-  table { border-collapse:collapse; width:100%; font-size:15px; } th,td { text-align:left; padding:6px 8px; border-bottom:1px solid #8883; vertical-align:top; }
-</style>
+<title>Yield Lens – Rental Property Calculator for Chrome</title>
+<meta name="description" content="Cash flow, cap rate, rental yield and stamp duty on Zillow, Redfin, Rightmove and Domain listings. A Chrome extension for property investors in the US, UK and Australia." />
+<link rel="icon" href="img/icon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<main>
-<h1>Yield Lens Privacy Policy</h1>
-<p class="muted">Effective: 4 November 2026</p>
+<header class="site"><div class="wrap">
+  <a class="brand" href="./"><img src="img/icon.svg" alt="" />Yield Lens</a>
+  <nav class="site"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="mailto:kyc.com.infomail@gmail.com">Contact</a></nav>
+</div></header>
 
-<p>Yield Lens is a Chrome extension that shows rental-investment estimates (cash flow, cap rate, yields, stamp duty) on property listings you are viewing. This policy explains what data the extension handles. In short: <strong>your browsing and property data stay in your browser. We do not run servers that receive it, and we never sell data.</strong></p>
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <h1>Know a rental's numbers before you fall for the photos.</h1>
+      <p class="lead">Yield Lens is a Chrome extension. It shows cash flow, cap rate, cash-on-cash return and stamp duty right on Zillow, Redfin, Rightmove and Domain listings, for the US, UK and Australia.</p>
+      <div class="ctas">
+        <span class="btn" aria-disabled="true">Coming soon to the Chrome Web Store</span>
+        <a class="btn secondary" href="#pricing">See pricing</a>
+      </div>
+    </div>
+    <img class="shot" src="img/panel-us.png" alt="Yield Lens panel showing monthly cash flow, cap rate and cash-on-cash return next to a sample US listing" width="1280" height="800" />
+  </section>
 
-<h2>1. Listing pages you view</h2>
-<p>On supported listing pages (Zillow, Redfin, Rightmove, Domain), the extension reads listing details already on the page, such as price, address, bedrooms, and the site's rent estimate. It does this locally in your browser to calculate the figures in the panel. This information is <strong>not sent</strong> to the developer or to any third party. The extension does not run on any other websites.</p>
+  <section id="features" class="features">
+    <div class="card"><h3>Instant investment metrics</h3><p>Monthly cash flow, cap rate, cash-on-cash, gross and net yield, mortgage payment and total cash needed, all calculated from the listing you are viewing.</p></div>
+    <div class="card"><h3>Local tax rules built in</h3><p>UK SDLT with additional-property and non-resident rates, Australian transfer duty with foreign-buyer surcharges, and US property tax by state.</p></div>
+    <div class="card"><h3>Every input adjustable</h3><p>Change price, rent, rate, deposit, vacancy, management or maintenance and every figure updates live. Set your own defaults per country.</p></div>
+  </section>
 
-<h2>2. Data stored on your device</h2>
-<table>
-  <tr><th>Data</th><th>Where</th><th>Purpose</th></tr>
-  <tr><td>Your default assumptions (interest rate, down payment, buyer type, units)</td><td><code>chrome.storage.sync</code></td><td>Remember your settings. If Chrome Sync is turned on, Google syncs this between your own browsers.</td></tr>
-  <tr><td>Saved listings and scenarios (Pro)</td><td><code>chrome.storage.local</code></td><td>The comparison page and CSV export. Stored only on your device.</td></tr>
-  <tr><td>Free-trial start date</td><td><code>chrome.storage.sync</code> and <code>chrome.storage.local</code></td><td>Lets the one-time 7-day trial be used only once. If Chrome Sync is on, Google keeps this with your Chrome profile.</td></tr>
-  <tr><td>Your license key, its activation ID, and the result of the last license check (Pro)</td><td><code>chrome.storage.local</code></td><td>Unlocks Pro in this browser, and keeps it working if you are briefly offline.</td></tr>
-</table>
-<p>You can delete saved listings on the comparison page. Removing the extension deletes its local data. The trial date may stay in Chrome Sync.</p>
+  <section class="block">
+    <h2>Stamp duty and overseas-buyer surcharges, included</h2>
+    <img class="shot" src="img/panel-uk.png" alt="Yield Lens panel on a sample UK listing with stamp duty including additional-property and non-resident surcharges" width="1280" height="800" />
+  </section>
 
-<h2>3. Payments and licenses (Dodo Payments)</h2>
-<p>Pro subscriptions are sold by <a href="https://dodopayments.com">Dodo Payments</a>, which acts as the merchant of record and handles checkout, payment processing, taxes, and receipts.</p>
-<ul>
-  <li>The 7-day free trial starts inside the extension. It needs no email address or card, and nothing is sent anywhere.</li>
-  <li>When you subscribe, you enter your email address and payment details on Dodo Payments' checkout pages. The extension never sees your card details. Dodo Payments emails you a license key.</li>
-  <li>To activate and periodically check Pro, the extension sends only your license key and a random installation label to Dodo Payments' license service. No browsing or listing data is sent.</li>
-  <li>After checkout you may be redirected to our activation page, with your license key in the link. The page shows the key and passes it to the extension in your browser. The page does not store or send the key elsewhere.</li>
-  <li>The developer can see your email address and subscription status in the Dodo Payments dashboard. These are used only to provide and support your subscription.</li>
-</ul>
-<p>Please see the <a href="https://dodopayments.com/privacy-policy">Dodo Payments privacy policy</a>.</p>
+  <section class="block">
+    <h2>Save and compare listings (Pro)</h2>
+    <img class="shot" src="img/compare.png" alt="Comparison table of saved listings and scenarios sorted by cash-on-cash return, with CSV export" width="1280" height="800" />
+  </section>
 
-<h2>4. What we don't do</h2>
-<ul>
-  <li>No analytics, tracking pixels or advertising.</li>
-  <li>No selling or transferring of user data to third parties, except as needed to process payments as described above.</li>
-  <li>No use of data for purposes unrelated to the extension's single purpose, and no use for credit-worthiness or lending decisions.</li>
-</ul>
+  <section id="pricing" class="block">
+    <h2>Pricing</h2>
+    <div class="pricing">
+      <div class="card">
+        <h3>Free</h3>
+        <div class="price">$0</div>
+        <ul>
+          <li>Calculator panel on every supported listing</li>
+          <li>US, UK and Australian tax rules</li>
+          <li>Custom default assumptions</li>
+        </ul>
+      </div>
+      <div class="card pro">
+        <h3>Pro</h3>
+        <div class="price">$6.99<span class="muted" style="font-size:16px;font-weight:400"> / month</span></div>
+        <ul>
+          <li>Everything in Free</li>
+          <li>Save listings and compare them side by side</li>
+          <li>Multiple scenarios per property</li>
+          <li>Export to CSV (Excel, Google Sheets)</li>
+          <li><strong>7-day free trial</strong> with no card required</li>
+        </ul>
+        <p class="muted" style="font-size:14px;margin-top:12px">Billed monthly in USD. Prices may include local VAT/GST, calculated at checkout. Cancel anytime. Full refund within 14 days of your first payment. See the <a href="refund.html">refund policy</a>.</p>
+      </div>
+    </div>
+  </section>
 
-<h2>5. Estimates, not advice</h2>
-<p>All figures are estimates based on the listing and your inputs, and are not financial, tax or legal advice. Yield Lens is not affiliated with or endorsed by Zillow, Redfin, Rightmove or Domain.</p>
-
-<h2>6. Changes and contact</h2>
-<p>If this policy changes, we will update this page and the effective date. Questions: <a href="mailto:kyc.com.infomail@gmail.com">kyc.com.infomail@gmail.com</a></p>
+  <section id="faq" class="block">
+    <h2>FAQ</h2>
+    <div class="card">
+      <h3>Which sites does it work on?</h3>
+      <p>Zillow and Redfin (US), Rightmove (UK) and Domain (Australia), on for-sale listing pages.</p>
+    </div><br />
+    <div class="card">
+      <h3>Is my data sent anywhere?</h3>
+      <p>No. Listing data is processed only in your browser. Pro checks your license key with our payment provider. See the <a href="privacy.html">privacy policy</a>.</p>
+    </div><br />
+    <div class="card">
+      <h3>How do I activate Pro after paying?</h3>
+      <p>After checkout you're returned to our activation page, which turns Pro on automatically. Your license key is also emailed to you, and you can paste it in the extension's settings.</p>
+    </div><br />
+    <div class="card">
+      <h3>Is this financial advice?</h3>
+      <p>No. All figures are estimates based on the listing and your inputs. Always verify with qualified professionals.</p>
+    </div>
+  </section>
 </main>
+
+<footer class="site"><div class="wrap">
+  <span>© 2026 Yield Lens · <a href="mailto:kyc.com.infomail@gmail.com">kyc.com.infomail@gmail.com</a><br />Payments are processed by Dodo Payments, our merchant of record. Not affiliated with Zillow, Redfin, Rightmove or Domain.</span>
+  <nav><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="refund.html">Refunds</a></nav>
+</div></footer>
 </body>
 </html>

@@ -1,3 +1,3 @@
-# Yield Lens Privacy Policy
+# Yield Lens website
 
-Privacy policy for the Yield Lens Chrome extension: https://gpily3-cell.github.io/yield-lens-privacy/
+https://gpily3-cell.github.io/yield-lens-privacy/ (source: realtyprj/store/site, copy here to publish)
