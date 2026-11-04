@@ -29,18 +29,21 @@
   <tr><th>Data</th><th>Where</th><th>Purpose</th></tr>
   <tr><td>Your default assumptions (interest rate, down payment, buyer type, units)</td><td><code>chrome.storage.sync</code></td><td>Remember your settings. If Chrome Sync is turned on, Google syncs this between your own browsers.</td></tr>
   <tr><td>Saved listings and scenarios (Pro)</td><td><code>chrome.storage.local</code></td><td>The comparison page and CSV export. Stored only on your device.</td></tr>
-  <tr><td>Subscription status cache</td><td><code>chrome.storage.local</code></td><td>Lets Pro features keep working if you are briefly offline.</td></tr>
+  <tr><td>Free-trial start date</td><td><code>chrome.storage.sync</code> and <code>chrome.storage.local</code></td><td>Lets the one-time 7-day trial be used only once. If Chrome Sync is on, Google keeps this with your Chrome profile.</td></tr>
+  <tr><td>Your license key, its activation ID, and the result of the last license check (Pro)</td><td><code>chrome.storage.local</code></td><td>Unlocks Pro in this browser, and keeps it working if you are briefly offline.</td></tr>
 </table>
-<p>You can delete saved listings on the comparison page. Removing the extension deletes all of its local data.</p>
+<p>You can delete saved listings on the comparison page. Removing the extension deletes its local data. The trial date may stay in Chrome Sync.</p>
 
-<h2>3. Payments and free trial (ExtensionPay / Stripe)</h2>
-<p>Pro subscriptions and free trials are handled by <a href="https://extensionpay.com">ExtensionPay</a>, with payments processed by <a href="https://stripe.com">Stripe</a>.</p>
+<h2>3. Payments and licenses (Dodo Payments)</h2>
+<p>Pro subscriptions are sold by <a href="https://dodopayments.com">Dodo Payments</a>, which acts as the merchant of record and handles checkout, payment processing, taxes, and receipts.</p>
 <ul>
-  <li>When you start a trial or subscribe, you enter your email address (and, to pay, your card details) on pages run by ExtensionPay and Stripe. The extension never sees your card details.</li>
-  <li>To check whether Pro is active, the extension contacts extensionpay.com using a random identifier created when the extension is installed. No browsing or listing data is sent.</li>
-  <li>The developer can see your email address and subscription status in the ExtensionPay dashboard. These are used only to provide and support your subscription.</li>
+  <li>The 7-day free trial starts inside the extension. It needs no email address or card, and nothing is sent anywhere.</li>
+  <li>When you subscribe, you enter your email address and payment details on Dodo Payments' checkout pages. The extension never sees your card details. Dodo Payments emails you a license key.</li>
+  <li>To activate and periodically check Pro, the extension sends only your license key and a random installation label to Dodo Payments' license service. No browsing or listing data is sent.</li>
+  <li>After checkout you may be redirected to our activation page, with your license key in the link. The page shows the key and passes it to the extension in your browser. The page does not store or send the key elsewhere.</li>
+  <li>The developer can see your email address and subscription status in the Dodo Payments dashboard. These are used only to provide and support your subscription.</li>
 </ul>
-<p>Please see the privacy policies of <a href="https://extensionpay.com/privacy">ExtensionPay</a> and <a href="https://stripe.com/privacy">Stripe</a>.</p>
+<p>Please see the <a href="https://dodopayments.com/privacy-policy">Dodo Payments privacy policy</a>.</p>
 
 <h2>4. What we don't do</h2>
 <ul>

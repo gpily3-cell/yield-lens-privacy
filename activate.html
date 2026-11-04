@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>Activate Yield Lens Pro</title>
+<style>
+  :root { --fg:#1b1f24; --muted:#5f6b7a; --bg:#f5f7f9; --card:#fff; --border:#dfe3e8; --accent:#2563eb; --ok:#15803d; --err:#c2410c; }
+  @media (prefers-color-scheme: dark) { :root { --fg:#e8eaed; --muted:#9aa4b1; --bg:#111315; --card:#1b1e22; --border:#30353b; --accent:#6b9cff; --ok:#4ade80; --err:#fb923c; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif; }
+  main { max-width:560px; margin:0 auto; padding:48px 16px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:24px; }
+  h1 { font-size:24px; margin:0 0 8px; }
+  .key { display:flex; gap:8px; margin:16px 0; }
+  code { flex:1; min-width:0; overflow-wrap:anywhere; font:15px ui-monospace,Consolas,monospace; background:var(--bg); border:1px solid var(--border); border-radius:8px; padding:10px 12px; }
+  button { font:inherit; font-weight:600; border:0; border-radius:8px; padding:0 16px; background:var(--accent); color:#fff; cursor:pointer; }
+  #yl-status { font-weight:600; }
+  #yl-status[data-state="ok"] { color:var(--ok); } #yl-status[data-state="error"] { color:var(--err); }
+  .muted { color:var(--muted); font-size:14px; }
+  [hidden] { display:none !important; }
+</style>
+</head>
+<body>
+<main>
+  <div class="card">
+    <h1>Thanks for subscribing to Yield Lens Pro</h1>
+    <p id="yl-status" data-state="ok">Looking for the Yield Lens extension…</p>
+
+    <div id="key-box" hidden>
+      <p class="muted">Your license key (also sent to your email):</p>
+      <div class="key"><code id="key"></code><button id="copy" type="button">Copy</button></div>
+    </div>
+
+    <div id="manual" hidden>
+      <p class="muted">To activate manually: click the Yield Lens icon in Chrome → <b>Default assumptions</b> → paste the key under <b>Plan</b> → <b>Activate</b>.</p>
+    </div>
+    <p id="no-key" class="muted" hidden>No license key was found in this link. Please use the key from your purchase email.</p>
+  </div>
+  <p class="muted">Questions? <a href="mailto:kyc.com.infomail@gmail.com">kyc.com.infomail@gmail.com</a> · <a href="./">Privacy policy</a></p>
+</main>
+<script>
+  (function () {
+    var key = (new URLSearchParams(location.search).get('license_key') || '').split(',')[0].trim();
+    var status = document.getElementById('yl-status');
+    if (key) {
+      document.getElementById('key').textContent = key;
+      document.getElementById('key-box').hidden = false;
+      document.getElementById('copy').onclick = function () {
+        navigator.clipboard.writeText(key).then(function () { document.getElementById('copy').textContent = 'Copied'; });
+      };
+    } else {
+      document.getElementById('no-key').hidden = false;
+    }
+    // The extension's content script marks the page and updates #yl-status.
+    setTimeout(function () {
+      if (document.documentElement.dataset.ylInstalled === 'true') {
+        if (!key) status.textContent = 'Yield Lens is installed.';
+        if (status.dataset.state === 'error') document.getElementById('manual').hidden = false;
+        return;
+      }
+      status.textContent = 'The Yield Lens extension was not detected in this browser.';
+      status.dataset.state = 'error';
+      document.getElementById('manual').hidden = false;
+    }, 2500);
+  })();
+</script>
+</body>
+</html>
