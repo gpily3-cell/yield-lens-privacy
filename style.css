@@ -26,7 +26,7 @@ a { color: var(--accent); }
 .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
 header.site { border-bottom: 1px solid var(--border); background: var(--card); }
 header.site .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 12px; }
-.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--fg); text-decoration: none; font-size: 18px; }
+.brand { white-space: nowrap; flex-shrink: 0; display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--fg); text-decoration: none; font-size: 18px; }
 .brand img { width: 30px; height: 30px; }
 nav.site { display: flex; gap: 18px; font-size: 15px; flex-wrap: wrap; }
 nav.site a { color: var(--muted); text-decoration: none; }
@@ -63,5 +63,6 @@ section.block h2 { font-size: 28px; margin: 0 0 16px; }
   .hero { grid-template-columns: 1fr; padding-top: 32px; }
   .hero h1 { font-size: 32px; }
   .features, .pricing { grid-template-columns: 1fr; }
-  nav.site { gap: 12px; font-size: 14px; }
+  header.site .wrap { height: auto; min-height: 60px; padding-top: 8px; padding-bottom: 8px; }
+  nav.site { gap: 4px 12px; font-size: 14px; justify-content: flex-end; }
 }
